@@ -5,7 +5,7 @@ Generic HttpClient to make Web API calls on the server.
 Reference both projects in your solution (e.g. WebApi project).
 
 In the IoC container registration (Autofac in this example), do the following:
-`
+```csharp
 builder.Register(ctx =>
 {
     // Add the appropriate values to app.config.
@@ -17,4 +17,4 @@ builder.Register(ctx =>
 }).As<IMySiteHttpClient>().SingleInstance();  
 // MUST be single instance otherwise it will chew up the sockets: 
 // https://aspnetmonsters.com/2016/08/2016-08-27-httpclientwrong/
-`
+```
